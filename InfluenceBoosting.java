@@ -101,48 +101,16 @@ public class InfluenceBoosting extends CustomScoreQuery {
 					
 					
 				
-					
-					//score = (float) Math.log( followers);// 									res2
-					//score = (float) Math.log( tweets);										//res2t
-					//score = (float) Math.log( followers + tweets);//							res2ft
-					//score = (float) Math.log (( followers)/(tweets));							//res2d
-					//score = (float) Math.log (( tweets)/(followers));//							res2df
-					// score = (float) ( Math.log( tweets) / Math.log(followers));////////////res2ds//   log t /log f
-				   // score = (float) ( Math.log( followers) / Math.log(tweets));////////////res2dsf  lg f / log t
-					//score = (float) ( Math.log( tweets) + Math.log(followers));////////////res2dft     log t + log f
-					 
-			       
-				  //récupération depuis la classe TESTE sur twitter
+				
 				  
 				  followers = (long) (TESTE.recupf(idu));
 				  tweets =  (long) (TESTE.recup(idu));
 				   
-				  //score = (float) Math.log( followers);////////////                     scf
-				  // score = (float) Math.log( tweets);//////////////                      sct
+				 
+				  score = (float) ( Math.log( tweets) + Math.log(followers));
 				  
 				  
-				  //score = (float) Math.log( followers + tweets);////////////             scft             log f+t
-				  score = (float) ( Math.log( tweets) + Math.log(followers));////////////scfst            log t + log f
 				  
-				  
-				  //score = (float)  Math.log (  (followers) / ( tweets) );////////////     scfdt           log (f/t)
-				  //score = (float) ( Math.log( followers) / Math.log(tweets));////////////scfdst          lg f / log t
-				   
-				  
-				  // score = (float)  Math.log (  (tweets) / ( followers) );////////////    sctdf           log (f/t)
-				  // score = (float) ( Math.log( tweets) / Math.log(followers));////////////sctdsf          log t /log f
-				   
-				   
-				   
-				   //multiplication 
-				   // score = (float) Math.log( followers * tweets);////////////			scm				 log f * t
-				   // score = (float) ( Math.log( tweets) * Math.log(followers));////////////scms            log t * log f
-					
-				  //sans log
-				 // score = (float)  (  (followers) / ( tweets) );////////////     scd           (f/t)
-				 // score = (float)  (  (tweets) / ( followers) );////////////     scdd           (t/f)
-				 // score = (float)    (tweets);////////////     scd           (f/t)
-				 // score = (float)     (  (tweets) + ( followers) );////////////     scmf           (f/t)
 								
 				
 					
